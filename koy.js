@@ -12,12 +12,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const banner = document.querySelector(".banner");
 
     navbarCollapse.addEventListener("show.bs.collapse", function () {
+        console.log("Menu opened");
         banner.classList.add("banner-shifted");
     });
 
     navbarCollapse.addEventListener("hide.bs.collapse", function () {
+        console.log("Menu closed");
         banner.classList.remove("banner-shifted");
     });
 });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const aboutElements = document.querySelectorAll(".about-left, .about-right");
+ 
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show-animation");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+ 
+    aboutElements.forEach(element => observer.observe(element));
+});
