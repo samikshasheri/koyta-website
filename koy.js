@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const aboutElements = document.querySelectorAll(".about-left, .about-right");
+    const aboutElements = document.querySelectorAll(".about-left, .about-right, .service-area");
  
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
