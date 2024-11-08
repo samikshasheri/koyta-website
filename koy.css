@@ -743,6 +743,8 @@ li {
 .about-sub-title.wh {
   border-bottom: 4px solid white;
   color: #ff508e;
+  display: inline-block;
+  text-transform: uppercase;
 }
 
 .feed-box {

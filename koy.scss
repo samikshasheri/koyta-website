@@ -831,6 +831,8 @@ button.navbar-toggler {
   &.wh {
     border-bottom: 4px solid white;
     color: $pink;
+    display: inline-block;
+    text-transform: uppercase;
   }
 }
 
